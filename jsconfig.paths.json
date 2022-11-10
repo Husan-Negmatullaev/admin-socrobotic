@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components": ["components"],
+      "@layouts": ["components/layouts"],
+      "@common": ["components/common"],
+      "@views": ["views"],
+      "@utils": ["utils"],
+      "@constants": ["utils/constants"],
+      "@helpers": ["utils/helpers"],
+      "@styles": ["styles"],
+      "@styles-variables": ["styles/base/variables.scss"],
+      "@mixins": ["styles/base/mixins.scss"],
+      "@icons": ["styles/fonts/icons.scss"],
+      "@services": ["services"],
+      "@hooks": ["services/hooks"],
+      "@fonts": ["assets/fonts"],
+      "@images": ["assets/img"],
+    }
+  }
+}
