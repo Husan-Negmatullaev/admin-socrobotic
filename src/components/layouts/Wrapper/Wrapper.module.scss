@@ -1,0 +1,16 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.container {
+  min-height: 100%;
+}
+
+.content {
+  margin-top: rem(65);
+
+  &__scrollbar {
+    height: 100%;
+    overflow: auto;
+  }
+}

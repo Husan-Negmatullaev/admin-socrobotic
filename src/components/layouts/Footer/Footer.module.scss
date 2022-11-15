@@ -1,0 +1,16 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.footer {
+  &__container {
+    padding: rem(15) rem(20);
+    text-align: center;
+  }
+
+  &__link {
+    text-align: center;
+    color: #2962ff;
+    font-size: rem(14);
+  }
+}

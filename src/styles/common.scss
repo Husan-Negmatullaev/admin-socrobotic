@@ -1,1 +1,47 @@
 // Бем блоки...
+
+.title {
+  font-size: rem(16);
+  line-height: 1.2;
+  color: inherit;
+
+  &_small {
+    font-size: rem(14);
+  }
+
+  &_medium {
+    font-size: rem(18);
+  }
+
+  &_big {
+    font-size: rem(24);
+  }
+
+  span {
+    font-size: 80%;
+  }
+}
+
+.stats-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(260), 1fr));
+  row-gap: rem(15);
+  column-gap: rem(10);
+
+  @media (max-width:$tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(rem(220), 1fr));
+  }
+
+  &__item {
+    font-size: rem(14);
+    line-height: math.div(18, 14);
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__text {}
+}

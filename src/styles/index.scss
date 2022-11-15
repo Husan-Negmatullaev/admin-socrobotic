@@ -8,11 +8,11 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:regular,500,600&display=swap");
 
 // Подключить если есть локальные файлы шрифтов
-// @import "fonts/fonts";
+@import "fonts/fonts";
 
 // Подключение иконочных шрифтов ==============================================================================================================================================================================================================================================================================
 // Подключить если есть файл иконочного шрифта
-// @import "fonts/icons";
+@import "fonts/icons";
 
 // Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
 $fontFamily: "Rubik";
@@ -33,8 +33,8 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
-  font-weight: 500;
-  color: #000;
+  font-weight: 400;
+  background-color: #f2f4f5;
 
   // Скролл заблокирован
   .lock & {
@@ -46,13 +46,13 @@ body {
   .loaded & {}
 }
 
-// #root {
-//   height: 100%;
-//   min-width: 320px;
-// }
+#root {
+  height: 100%;
+  min-width: 320px;
+}
 
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
-#wrapper {
+.wrapper {
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -84,12 +84,16 @@ body {
     @if ($maxWidthContainer>0) {
       max-width: rem($maxWidthContainer);
       box-sizing: content-box;
-      margin: 0 auto;
+      padding: rem(20);
     }
 
-    @if ($containerPadding>0) {
-      padding: 0 rem(math.div($containerPadding, 2));
+    @media (min-width:$mobile) {
+      margin-left: rem(250);
     }
+
+    // @if ($containerPadding>0) {
+    //   padding: 0 rem(math.div($containerPadding, 2));
+    // }
   }
 }
 
@@ -132,7 +136,79 @@ body {
 // Для подключения/отключения конкретных стилей смотри base.scss
 
 // Подключение стилей отдельных страниц
+@import "common";
 @import "base";
 @import "app";
 
 .page {}
+
+.icon-menu {
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    flex: 0 0 rem(20);
+    height: rem(15);
+    cursor: pointer;
+    z-index: 10;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #fff;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: calc(50% - rem(1));
+    }
+
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before,
+      &::after {}
+
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.menu-open .SideBar_sidebar__4shvG {
+  left: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.scrollbar {
+  height: 100%;
+  overflow: auto;
+
+  &_content {
+    height: 100%;
+  }
+}

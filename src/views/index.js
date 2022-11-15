@@ -1,1 +1,5 @@
-console.log("Index");
+import PannelPage from "./PannelPage/PannelPage";
+
+export {
+  PannelPage
+};

@@ -1,0 +1,99 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: rem(250);
+  height: 100%;
+  z-index: 1;
+  background-color: #233242;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s ease 0s;
+
+  @media (max-width:$mobile) {
+    left: -100%;
+  }
+
+  &__logo {
+    padding: 0 rem(10) 0 rem(10);
+    min-height: rem(65);
+    box-shadow: 1px 0 7px rgb(0, 0, 0, 5%);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(15);
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(5);
+    color: #fff;
+    transition: opacity 0.3s ease 0s;
+    font-size: rem(17.5);
+    line-height: math.div(20, 17.5);
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+    margin-top: rem(65);
+  }
+}
+
+.menu {
+
+  &__body {
+    flex: 1 1 auto;
+  }
+
+  &__scrollbar {
+    // height: 80vh;
+    height: 100%;
+    overflow: auto;
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: rem(13);
+    line-height: math.div(25, 13);
+    border-left: 2px solid transparent;
+    padding: rem(12) rem(15);
+    opacity: .5;
+    column-gap: rem(10);
+    transition: all 0.2s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(0, 0, 0, .1);
+        border-left: 2px solid #137eff;
+        opacity: 1;
+      }
+    }
+  }
+}

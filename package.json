@@ -7,12 +7,16 @@
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
     "@testing-library/user-event": "latest",
+    "chart.js": "^3.9.1",
+    "clsx": "^1.2.1",
     "react": "latest",
+    "react-chartjs-2": "^4.3.1",
     "react-dom": "latest",
     "react-redux": "latest",
     "react-router-dom": "latest",
     "react-scripts": "latest",
     "sass": "latest",
+    "simplebar-react": "^2.4.3",
     "web-vitals": "latest"
   },
   "scripts": {

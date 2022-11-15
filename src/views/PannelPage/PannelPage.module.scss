@@ -1,0 +1,43 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.mainPannel {
+  &__body {}
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: rem(35);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__chart {
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+      }
+    }
+  }
+
+  &__stats {
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+    }
+  }
+}

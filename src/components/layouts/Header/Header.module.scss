@@ -1,0 +1,89 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 1px 0 7px rgba(0, 0, 0, 5%);
+
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    flex: 0 1 rem(250);
+    transition: flex 0.3s ease 0s;
+    text-align: center;
+    padding: 0px rem(10);
+    background-color: #233242;
+    min-height: rem(65);
+    display: flex;
+    justify-content: center;
+    gap: rem(10);
+
+    @media (max-width:$mobile) {
+      text-align: left;
+      flex: 1 1 auto;
+      padding: 0px rem(15);
+      align-items: center;
+    }
+  }
+
+  &__linkLogo {
+    color: #fff;
+    font-size: rem(17.5);
+    line-height: math.div(20, 17.5);
+    display: inline-flex;
+    align-items: center;
+    gap: rem(5);
+
+    @media (max-width:$mobile) {
+      margin: 0 auto;
+    }
+  }
+
+  &__icon {
+    @media (min-width:$mobile) {
+      display: none;
+    }
+  }
+
+  &__list {
+    background-color: #fff;
+    min-height: rem(65);
+    padding: 0px rem(15);
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: rem(10);
+
+    @media (max-width:$mobile) {
+      display: none;
+    }
+
+    li {
+      font-size: rem(13);
+      line-height: math.div(19, 13);
+    }
+  }
+
+  &__button {
+    color: #2962ff;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__username {
+    font-weight: 500;
+  }
+}

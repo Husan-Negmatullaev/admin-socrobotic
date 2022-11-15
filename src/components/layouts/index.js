@@ -1,1 +1,5 @@
-console.log("Index");
+import Wrapper from "./Wrapper/Wrapper";
+
+export {
+  Wrapper,
+}
