@@ -3,10 +3,73 @@
 
 .button {
   display: inline-flex;
-  padding: 0px 0px;
+  align-items: center;
+  column-gap: rem(5);
+  padding: rem(6) rem(12);
+  font-weight: 400;
+  font-size: rem(14);
+  line-height: 1.5;
+  border-radius: 2px;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  color: #fff;
 
-  @media (any-hover: hover) {
-    &:hover {}
+  @mixin outline($current_color, $hover_color, $text_color: #fff) {
+    border: 1px solid $current_color;
+    color: $current_color;
+    background-color: transparent;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: transparent;
+        background-color: $hover_color;
+        color: $text_color;
+      }
+    }
+  }
+
+  &_success {
+    background-color: #28a745;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+        background-color: #218838;
+      }
+    }
+
+    &-outline {
+      @include outline(#28a745, #218838);
+    }
+  }
+
+  &_grey {
+    background-color: #7D858C;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+        background-color: #61686D;
+      }
+    }
+
+    &-outline {
+      @include outline(#7D858C, #61686D);
+    }
+  }
+
+  &_blue {
+    background-color: #3897FD;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+        background-color: #3184DE;
+      }
+    }
+
+    &-outline {
+      @include outline(#3897FD, #3184DE);
+    }
   }
 
   &._fw {

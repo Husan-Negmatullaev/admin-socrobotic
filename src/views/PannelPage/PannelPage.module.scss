@@ -7,24 +7,33 @@
 
   &__row {
     &:not(:last-child) {
-      margin-bottom: rem(35);
+      margin-bottom: rem(40);
     }
   }
 
   &__title {
     &:not(:last-child) {
-      margin-bottom: rem(15);
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(14);
+    line-height: math.div(18, 14);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
     }
   }
 
   &__chart {
     &:not(:last-child) {
-      margin-bottom: rem(50);
+      margin-bottom: rem(35);
     }
 
     @media (max-width:$mobile) {
       &:not(:last-child) {
-        margin-bottom: rem(20);
+        margin-bottom: rem(15);
       }
     }
   }
@@ -39,5 +48,75 @@
         margin-bottom: rem(25);
       }
     }
+  }
+
+  &__formBalance {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__table {}
+
+  &__users {}
+}
+
+.formBalance {
+
+  &__row {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: rem(20);
+  }
+
+  &__column {
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+
+    &_direction {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: rem(5);
+    }
+
+    @media (max-width:$mobileSmall) {
+      flex-wrap: wrap;
+    }
+
+    // flex-wrap: wrap;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+  }
+
+  &__input {}
+
+  &__text {
+    font-size: rem(13);
+    white-space: nowrap;
+  }
+
+
+  &__button {
+    &:not(:last-child) {
+      margin: 0px 0px 0px rem(10);
+    }
+  }
+}
+
+.users {
+  &__button {
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__text {
+    font-size: rem(12);
   }
 }

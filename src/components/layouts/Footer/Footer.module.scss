@@ -12,5 +12,11 @@
     text-align: center;
     color: #2962ff;
     font-size: rem(14);
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

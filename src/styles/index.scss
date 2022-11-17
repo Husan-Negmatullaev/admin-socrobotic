@@ -82,7 +82,7 @@ body {
   // Отзывчивая
   [class*="container"] {
     @if ($maxWidthContainer>0) {
-      max-width: rem($maxWidthContainer);
+      max-width: 100%;
       box-sizing: content-box;
       padding: rem(20);
     }

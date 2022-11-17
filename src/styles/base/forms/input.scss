@@ -13,8 +13,11 @@ textarea {
   border-radius: 0 !important;
   width: 100%;
   display: block;
-  padding: 0px 20px;
-  border: 1px solid #eee;
+  padding: rem(6) rem(12);
+  border-radius: 2px;
+  border: 1px solid #e9ecef;
+  color: #4f5467;
+  background-color: #fff;
 
   &._focus {}
 
