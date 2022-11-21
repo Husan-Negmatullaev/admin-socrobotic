@@ -50,50 +50,19 @@
   &__text {}
 }
 
-.table {
-  overflow: auto;
-  padding-bottom: rem(10);
-
-  &__wrapper {
-    border-collapse: collapse;
-    border: 1px solid rgba(0, 0, 0, .1);
-    width: 100%;
-  }
-
-  &__head {}
-
-  &__tr {}
-
-  &__th {
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-bottom-width: 2px;
-    font-size: rem(13);
-    font-weight: 500;
-    padding: rem(16);
-    text-align: left;
-  }
-
-  &__body {}
-
-  &__td {
-    padding: rem(16);
-    font-size: rem(13);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  &__button {
-    font-weight: 500;
-    color: #2962ff;
-
-    @media (any-hover: hover) {
-      &:hover {
-        color: #381be7;
-      }
-    }
-  }
-}
-
 .small {
   font-size: 80%;
   font-weight: 400;
+}
+
+.button-link {
+  color: #2962ff;
+  font-size: rem(12.5);
+  line-height: math.div(19, 12.5);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: #381be7;
+    }
+  }
 }

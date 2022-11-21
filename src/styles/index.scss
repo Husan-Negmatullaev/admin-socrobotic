@@ -81,14 +81,16 @@ body {
 
   // Отзывчивая
   [class*="container"] {
-    @if ($maxWidthContainer>0) {
-      max-width: 100%;
-      box-sizing: content-box;
-      padding: rem(20);
-    }
+    &:not(.swal2-html-container) {
+      @if ($maxWidthContainer>0) {
+        max-width: 100%;
+        box-sizing: content-box;
+        padding: rem(20);
+      }
 
-    @media (min-width:$mobile) {
-      margin-left: rem(250);
+      @media (min-width:$mobile) {
+        margin-left: rem(250);
+      }
     }
 
     // @if ($containerPadding>0) {
@@ -140,7 +142,15 @@ body {
 @import "base";
 @import "app";
 
-.page {}
+.page {
+  &__body {}
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+}
 
 .icon-menu {
   @media (max-width: $mobile) {

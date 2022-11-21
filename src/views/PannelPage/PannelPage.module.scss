@@ -13,7 +13,7 @@
 
   &__title {
     &:not(:last-child) {
-      margin-bottom: rem(10);
+      margin-bottom: rem(15);
     }
   }
 
@@ -40,12 +40,12 @@
 
   &__stats {
     &:not(:last-child) {
-      margin-bottom: rem(50);
+      margin-bottom: rem(30);
     }
 
     @media (max-width:$mobile) {
       &:not(:last-child) {
-        margin-bottom: rem(25);
+        margin-bottom: rem(20);
       }
     }
   }
@@ -59,6 +59,12 @@
   &__table {}
 
   &__users {}
+
+  &__info {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
 }
 
 .formBalance {
@@ -71,6 +77,10 @@
   }
 
   &__column {
+    @media (max-width:$mobileSmall) {
+      flex: 1 1 auto;
+    }
+
     display: flex;
     align-items: center;
     gap: rem(4);
@@ -92,9 +102,17 @@
     display: flex;
     align-items: center;
     gap: rem(4);
+
+    @media (max-width:$mobileSmall) {
+      flex-wrap: wrap;
+    }
   }
 
-  &__input {}
+  &__input {
+    @media (max-width:$mobileSmall) {
+      width: auto;
+    }
+  }
 
   &__text {
     font-size: rem(13);
@@ -119,4 +137,35 @@
   &__text {
     font-size: rem(12);
   }
+}
+
+.replenishment {
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__form {
+    max-width: rem(280);
+  }
+
+  &__subtitle {
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__items {}
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__input {}
+
+  &__button {}
 }

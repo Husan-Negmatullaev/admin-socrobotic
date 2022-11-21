@@ -95,5 +95,11 @@
         opacity: 1;
       }
     }
+
+    &_active {
+      background-color: rgba(0, 0, 0, .1);
+      border-left: 2px solid #137eff;
+      opacity: 1;
+    }
   }
 }

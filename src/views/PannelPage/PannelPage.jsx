@@ -2,15 +2,16 @@ import React from "react";
 import clsx from "clsx";
 
 import { LineChart } from "@components/chart";
+import { TableUsers } from "@components/tables";
 
 import styles from "./PannelPage.module.scss";
 
 const PannelPage = () => {
   return (
-    <div className={styles.mainPannel}>
-      <div className={styles.mainPannel__body}>
-        <div className={styles.mainPannel__row}>
-          <h4 className={clsx(styles.mainPannel__title, "title")}>Сводка</h4>
+    <div className={clsx(styles.mainPannel, "page")}>
+      <div className={clsx(styles.mainPannel__body, "page__body")}>
+        <div className={clsx(styles.mainPannel__row, "page__row")}>
+          <h4 className={clsx(styles.mainPannel__title, "title title_medium")}>Сводка</h4>
           <div className={clsx(styles.mainPannel__stats, "stats-info")}>
             <div className="stats-info__item">
               <div className="stats-info__title">0 руб.</div>
@@ -47,7 +48,7 @@ const PannelPage = () => {
             </div>
           </div>
         </div>
-        <div className={styles.mainPannel__row}>
+        <div className={clsx(styles.mainPannel__row, "page__row")}>
           <h3 className={clsx(styles.mainPannel__title, "title title_medium")}>
             Пользователи бота
           </h3>
@@ -79,7 +80,7 @@ const PannelPage = () => {
             </div>
           </div>
         </div>
-        <div className={styles.mainPannel__row}>
+        <div className={clsx(styles.mainPannel__row, "page__row")}>
           <h3 className={clsx(styles.mainPannel__title, "title title_medium")}>
             Пополнить баланс по ID
           </h3>
@@ -103,7 +104,7 @@ const PannelPage = () => {
                   className={clsx(styles.formBalance__input, "input")}
                 />
                 <span className={styles.formBalance__text}>руб на баланс</span>
-                <button type="button" className={clsx(styles.formBalance__button, "button button_success-outline")}>Готово</button>
+                <button className={clsx(styles.formBalance__button, "button button_success-outline")}>Готово</button>
               </form>
               <form className={styles.formBalance__column}>
                 <span className={styles.formBalance__text}>Показать пользователя ID</span>
@@ -114,7 +115,7 @@ const PannelPage = () => {
                   placeholder={"000"}
                   className={clsx(styles.formBalance__input, "input")}
                 />
-                <button type="button" className={clsx(styles.formBalance__button, "button button_success-outline")}>Готово</button>
+                <button className={clsx(styles.formBalance__button, "button button_success-outline")}>Готово</button>
               </form>
               <form className={clsx(styles.formBalance__column, styles.formBalance__column_direction)}>
                 <div className={styles.formBalance__wrapper}>
@@ -126,62 +127,18 @@ const PannelPage = () => {
                     placeholder={"000"}
                     className={clsx(styles.formBalance__input, "input")}
                   />
-                  <button type="button" className={clsx(styles.formBalance__button, "button button_success-outline")}>Готово</button>
+                  <button className={clsx(styles.formBalance__button, "button button_success-outline")}>Готово</button>
                 </div>
-                <button type="button" className={clsx(styles.formBalance__button, "button button_grey-outline")}>Сбросить поиск</button>
+                <button className={clsx(styles.formBalance__button, "button button_grey-outline")}>Сбросить поиск</button>
               </form>
             </div>
           </div>
-          <div className={clsx(styles.mainPannel__table, "table")}>
-            <table className="table__wrapper">
-              <thead className="table__head">
-                <tr className="table__tr">
-                  <th className="table__th">ID</th>
-                  <th className="table__th">Логин</th>
-                  <th className="table__th"><button type="button" className="table__button">Баланс</button></th>
-                  <th className="table__th"><button type="button" className="table__button">Рефералы</button></th>
-                  <th className="table__th"><button type="button" className="table__button">Заработано</button></th>
-                  <th className="table__th"><button type="button" className="table__button">Потрачено</button></th>
-                  <th className="table__th"><button type="button" className="table__button">Первый заход</button></th>
-                  <th className="table__th"><button type="button" className="table__button">Реф. %</button></th>
-                  <th className="table__th"><button type="button" className="table__button">Возвраты</button></th>
-                  <th className="table__th"></th>
-                </tr>
-              </thead>
-              <tbody className="table__body">
-                <tr className="table__tr">
-                  <td className="table__td">766811959</td>
-                  <td className="table__td"><button type="button" className="table__button">@chatbotzero</button></td>
-                  <td className="table__td"><button type="button" className="table__button">0₽</button></td>
-                  <td className="table__td">0 (<button type="button" className="table__button">список</button>)</td>
-                  <td className="table__td">0</td>
-                  <td className="table__td">0₽ (<button type="button" className="table__button">покупки</button>)</td>
-                  <td className="table__td">02.08.2022 в 10:32</td>
-                  <td className="table__td"><button type="button" className="table__button">0%</button></td>
-                  <td className="table__td">0</td>
-                  <td className="table__td"><button className="button button_blue-outline">Написать</button></td>
-                </tr>
-                <tr className="table__tr">
-                  <td className="table__td">766811959</td>
-                  <td className="table__td"><button type="button" className="table__button">@chatbotzero</button></td>
-                  <td className="table__td"><button type="button" className="table__button">0₽</button></td>
-                  <td className="table__td">0 (<button type="button" className="table__button">список</button>)</td>
-                  <td className="table__td">0</td>
-                  <td className="table__td">0₽ (<button type="button" className="table__button">покупки</button>)</td>
-                  <td className="table__td">02.08.2022 в 10:32</td>
-                  <td className="table__td"><button type="button" className="table__button">0%</button></td>
-                  <td className="table__td">0</td>
-                  <td className="table__td"><button className="button button_blue-outline">Написать</button></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <TableUsers classes={styles.mainPannel__table} />
         </div>
-        <div className={styles.mainPannel__row}>
+        <div className={clsx(styles.mainPannel__row, "page__row")}>
           <div className={clsx(styles.mainPannel__users, styles.users)}>
             <button type="button" className={clsx(styles.users__button, "button button_success-outline _icon-download")}> Скачать всех пользователей списком</button>
             <p className={clsx(styles.users__text, "small")}>Формат: ID:Логин:Баланс</p>
-
           </div>
         </div>
       </div>

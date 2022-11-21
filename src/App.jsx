@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { Wrapper } from "@layouts";
-import { PannelPage } from "@views";
+import { DepositsPage, PannelPage } from "@views";
 
 import { isMobile } from "@utils/helpers/isMobile.helpers.js";
 
@@ -15,7 +15,8 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Wrapper />}>
-        <Route index element={<PannelPage />} />
+        <Route index element={<PannelPage />} /> {/* path="users" */}
+        <Route path="deposits" element={<DepositsPage />} />
       </Route>
     </Routes>
   )
