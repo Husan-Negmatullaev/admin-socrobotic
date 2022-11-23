@@ -1,0 +1,308 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.constructor {
+  @media (min-width:$mobile) {
+    margin-top: rem(30);
+  }
+
+  &__body {}
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: rem(90) !important;
+    }
+
+    @media (max-width:$tablet) {
+      &:not(:last-child) {
+        margin-bottom: rem(40) !important;
+      }
+    }
+  }
+
+  &__header {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__mainTitle {
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(11.2);
+  }
+
+  &__actions {
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+    }
+  }
+
+  &__others {}
+}
+
+.constructorActions {
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(11.2);
+
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(rem(215), 1fr));
+    // min-width: rem(820);
+
+    overflow: auto;
+  }
+
+  &__action {}
+
+  &__button {
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: rem(7);
+    background-color: transparent;
+    width: 100%;
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+    transition: all 0.1s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(0, 0, 0, .1);
+      }
+    }
+
+    &_disabled {
+      background-color: rgba(0, 0, 0, .05);
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: rgba(0, 0, 0, .1);
+        }
+      }
+    }
+  }
+
+  &__form {}
+
+  &__body {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__item {
+    text-align: start;
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+
+    &_checkbox {}
+  }
+
+  &__label {
+    .constructorActions__item_checkbox & {
+      font-size: rem(18);
+      font-weight: 500;
+      margin: 0px 0px 0px rem(5);
+      line-height: math.div(20, 18);
+    }
+  }
+
+  &__input {
+    font-size: rem(14);
+    color: #4f5467;
+  }
+
+  &__textarea {
+    height: rem(56);
+    display: block;
+    width: 100%;
+    resize: none;
+    padding: .375rem .75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    color: #4f5467;
+    border-radius: 2px;
+    border: 1px solid #e9ecef;
+    background-color: #fff;
+  }
+
+  &__select {
+    font-size: rem(14);
+    color: #4f5467;
+  }
+}
+
+.constructorOthers {
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+        font-size: rem(16);
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(13.5);
+
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+      }
+    }
+  }
+
+  &__back {
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__body {
+    padding: rem(40) 0px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+  }
+
+  &__form {
+    margin: 0 auto;
+
+    @media (min-width:$pc) {
+      max-width: rem(700);
+    }
+
+    @media (max-width:$pc) {
+      max-width: rem(605);
+    }
+
+    @media (max-width:$tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__button {}
+
+  &__actions {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__description {
+    font-size: rem(18);
+
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+
+    @media (max-width:$mobile) {
+      font-size: rem(16);
+    }
+  }
+
+  &__text {
+    font-size: rem(15);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    span {
+      color: #18D577;
+    }
+  }
+}
+
+.constructorOthersForm {
+  &__body {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__item {
+    text-align: start;
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+  }
+
+  &__label {
+    color: #545454;
+  }
+
+  &__input {}
+
+  &__button {}
+}

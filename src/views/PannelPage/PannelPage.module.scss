@@ -138,34 +138,3 @@
     font-size: rem(12);
   }
 }
-
-.replenishment {
-
-  &__title {
-    &:not(:last-child) {
-      margin-bottom: rem(20);
-    }
-  }
-
-  &__form {
-    max-width: rem(280);
-  }
-
-  &__subtitle {
-    &:not(:last-child) {
-      margin-bottom: rem(5);
-    }
-  }
-
-  &__items {}
-
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: rem(25);
-    }
-  }
-
-  &__input {}
-
-  &__button {}
-}

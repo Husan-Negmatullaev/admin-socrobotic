@@ -1,0 +1,15 @@
+@use "sass:math";
+@import "@mixins";
+
+.editable {
+
+  &__title {
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+}

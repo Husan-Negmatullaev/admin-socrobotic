@@ -1,0 +1,57 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.depositPage {
+  &__body {}
+
+  &__row {}
+
+  &__table {
+    margin-bottom: rem(40);
+  }
+
+  &__replenishment {}
+
+  &__pagging {}
+}
+
+.replenishment {
+
+  &__title {
+
+    &:not(:last-child) {
+      margin-bottom: rem(35);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+  }
+
+  &__form {
+    max-width: rem(280);
+  }
+
+  &__subtitle {
+    font-size: rem(16);
+
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__items {}
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__input {}
+
+  &__button {}
+}

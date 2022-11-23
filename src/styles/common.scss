@@ -66,3 +66,14 @@
     }
   }
 }
+
+.wrapper-container {
+  width: 100%;
+  margin: 0 auto !important;
+  padding: 0px rem(10) !important;
+  max-width: rem(960) !important;
+
+  @media (min-width:em(1600)) {
+    max-width: rem(1140) !important;
+  }
+}

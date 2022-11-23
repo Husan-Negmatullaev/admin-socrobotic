@@ -1,0 +1,61 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.support {
+  &__body {}
+
+  &__row {}
+
+  &__header {
+    margin-top: rem(30);
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__title {}
+
+  &__button {
+    @media (max-width:$mobileSmall) {
+      width: 100%;
+    }
+  }
+
+  &__table {}
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(30);
+  }
+
+  &__input {
+    font-size: .875rem;
+  }
+
+  &__textarea {
+    display: block;
+    width: 100%;
+    min-height: rem(150);
+    padding: 0.375rem 0.75rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4f5467;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    resize: vertical !important;
+  }
+}

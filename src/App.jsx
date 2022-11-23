@@ -2,7 +2,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { Wrapper } from "@layouts";
-import { DepositsPage, PannelPage } from "@views";
+import { ConstructorPage, DepositsPage, PannelPage, SettingsPage, SupportPage } from "@views";
+import { MailingPage } from "@views/mailing";
 
 import { isMobile } from "@utils/helpers/isMobile.helpers.js";
 
@@ -17,6 +18,10 @@ const App = () => {
       <Route path="/" element={<Wrapper />}>
         <Route index element={<PannelPage />} /> {/* path="users" */}
         <Route path="deposits" element={<DepositsPage />} />
+        <Route path="constructor" element={<ConstructorPage />} />
+        <Route path="support" element={<SupportPage />} />
+        <Route path="settings" element={<SettingsPage />} />
+        <Route path="mailing" element={<MailingPage />} />
       </Route>
     </Routes>
   )

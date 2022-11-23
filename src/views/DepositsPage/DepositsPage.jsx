@@ -4,6 +4,9 @@ import clsx from "clsx";
 import styles from "./DepositsPage.module.scss";
 
 const DepositsPage = () => {
+
+  console.log(styles);
+
   return (
     <div className={clsx(styles.depositPage, "page")}>
       <div className={clsx(styles.depositPage__body, "page__body")}>
@@ -13,7 +16,7 @@ const DepositsPage = () => {
               Поплнение
             </h4>
             <form className={styles.replenishment__form}>
-              <h6 className={clsx(styles.replenishment__subtitle, "title title_small")}>Поиск</h6>
+              <h6 className={clsx(styles.replenishment__subtitle, "title")}>Поиск</h6>
               <div className={styles.replenishment__items}>
                 <div className={styles.replenishment__item}>
                   <input
@@ -41,7 +44,7 @@ const DepositsPage = () => {
           </div>
         </div>
         <div className={clsx(styles.depositPage__row, "page__row")}>
-          <div className={clsx(styles.depositPage__info, "table-blue")}>
+          <div className={clsx(styles.depositPage__table, "table-blue")}>
             <table className="table-blue__content">
               <thead className="table-blue__head">
                 <tr className="table-blue__tr">

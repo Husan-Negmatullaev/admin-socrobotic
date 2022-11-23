@@ -81,15 +81,20 @@ body {
 
   // Отзывчивая
   [class*="container"] {
-    &:not(.swal2-html-container) {
-      @if ($maxWidthContainer>0) {
-        max-width: 100%;
-        box-sizing: content-box;
-        padding: rem(20);
-      }
 
-      @media (min-width:$mobile) {
-        margin-left: rem(250);
+    &:not(.swal2-html-container) {
+      &:not(.swal2-container) {
+        &:not(.wrapper-container) {
+          @if ($maxWidthContainer>0) {
+            max-width: 100%;
+            box-sizing: content-box;
+            padding: rem(20);
+          }
+
+          @media (min-width:$mobile) {
+            margin-left: rem(250);
+          }
+        }
       }
     }
 

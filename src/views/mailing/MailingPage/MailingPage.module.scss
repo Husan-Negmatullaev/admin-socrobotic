@@ -1,0 +1,30 @@
+@use "sass:math";
+@import "@mixins";
+
+.mailing {
+  &__body {}
+
+  &__row {
+    max-width: rem(320);
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(11.2);
+    line-height: math.div(20, 11.2);
+
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__link {
+    font-size: rem(11.2);
+    line-height: math.div(18, 11.2);
+  }
+}

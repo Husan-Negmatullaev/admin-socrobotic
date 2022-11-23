@@ -1,0 +1,146 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.settings {
+  margin: rem(20) 0px;
+
+  &__body {}
+
+  &__row {}
+
+  &__header {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__title {}
+
+  &__content {}
+
+  &__item {}
+}
+
+.settingItem {
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding-bottom: rem(15);
+  }
+
+  &:not(:first-child) {
+    padding-top: rem(15);
+  }
+
+  &_padding {
+    &:not(:last-child) {
+      padding-bottom: rem(35);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(11.2);
+    line-height: math.div(18, 11);
+    max-width: rem(705);
+
+    &_margin {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &__link {}
+
+  &__form {
+    &_checkbox {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(5);
+    }
+  }
+
+  &__input {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    &_id {
+      max-width: rem(250);
+    }
+
+    &_number {
+      max-width: rem(200);
+    }
+  }
+
+  &__textarea {
+    display: block;
+    width: 50%;
+    min-height: rem(150);
+    max-width: rem(400);
+    padding: 0.375rem 0.75rem !important;
+    resize: vertical !important;
+    font-size: .875rem;
+    line-height: 1.5;
+    color: #4f5467;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    &_min {
+      min-height: rem(55);
+    }
+
+    @media (max-width:$mobile) {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__label {
+    font-size: rem(14);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+  }
+
+  &__subtitle {
+    margin: rem(6) 0px;
+    font-size: rem(14);
+  }
+
+  &__actions {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: rem(5);
+  }
+
+  &__action {}
+}

@@ -59,18 +59,41 @@
   }
 
   &_blue {
-    background-color: #3897FD;
+    background-color: #007bff;
 
     @media (any-hover: hover) {
       &:hover {
         color: #fff;
-        background-color: #3184DE;
+        background-color: #0069d9;
       }
     }
 
     &-outline {
-      @include outline(#3897FD, #3184DE);
+      @include outline(#007bff, #0069d9);
     }
+  }
+
+  &_red {
+    background-color: #dc3545;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+        background-color: #c82333;
+      }
+    }
+
+    &-outline {
+      @include outline(#dc3545, #dc3545);
+    }
+  }
+
+  &:disabled {
+    opacity: .65;
+    color: #6c757d;
+    border: 1px solid #6c757d;
+    background-color: transparent;
+    cursor: not-allowed;
   }
 
   &._fw {

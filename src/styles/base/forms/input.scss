@@ -22,6 +22,11 @@ textarea {
   &._focus {}
 
   &._error {}
+
+  &:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+  }
 }
 
 textarea.input {
