@@ -55,6 +55,15 @@
   font-weight: 400;
 }
 
+.text {
+  font-size: rem(11.2);
+  line-height: math.div(18, 11.2);
+}
+
+.success {
+  color: #2DBB4E;
+}
+
 .button-link {
   color: #2962ff;
   font-size: rem(12.5);

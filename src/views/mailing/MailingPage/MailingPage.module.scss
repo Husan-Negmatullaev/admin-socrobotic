@@ -1,11 +1,16 @@
 @use "sass:math";
 @import "@mixins";
+@import "@styles-variables";
 
 .mailing {
   &__body {}
 
   &__row {
-    max-width: rem(320);
+    &:first-child {
+      max-width: rem(320);
+    }
+
+    max-width: rem(460);
   }
 
   &__title {
@@ -24,7 +29,142 @@
   }
 
   &__link {
-    font-size: rem(11.2);
+    font-size: rem(11.2) !important;
     line-height: math.div(18, 11.2);
+  }
+
+  &__form {}
+}
+
+.formMailing {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+
+    &_margin {
+      &:not(:last-child) {
+        margin-bottom: rem(60);
+      }
+
+      @media (max-width:$mobile) {
+        &:not(:last-child) {
+          margin-bottom: rem(25);
+        }
+      }
+    }
+  }
+
+  &__textarea {
+    display: block;
+    min-height: rem(250);
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    color: #4f5467;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+
+  &__button {}
+
+  &__subtitle {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(11.2);
+    line-height: math.div(20, 11.2);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__date {
+    max-width: rem(250);
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    color: #4f5467;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+
+  &__label {
+    font-size: rem(14);
+    line-height: math.div(22, 14);
+    display: block;
+  }
+
+  &__select {
+    max-width: rem(200);
+  }
+
+  &__inputLinks {}
+
+  &__polls {
+
+    &Inputs {
+      display: flex;
+      flex-direction: column;
+      gap: rem(15);
+
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+    }
+  }
+
+  &__input {
+    &_margin {
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+    }
+  }
+}
+
+.formPopup {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__image {
+    cursor: pointer;
+    max-width: rem(155);
+    margin: 0 auto;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    font-size: rem(14);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    &_image {
+      display: none;
+    }
   }
 }

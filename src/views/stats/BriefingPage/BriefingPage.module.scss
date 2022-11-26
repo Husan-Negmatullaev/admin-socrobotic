@@ -1,0 +1,122 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.brief {
+  margin-top: rem(25);
+  &__body {}
+
+  &__row {}
+
+  &__stats {}
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 rem(20);
+    font-weight: 500;
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__title {
+    font-size: rem(21);
+    line-height: math.div(26, 21);
+  }
+
+  &__button {}
+}
+
+.briefStats {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: rem(20);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: 1fr;
+    }
+
+    margin: 0 rem(-10);
+  }
+
+  &__item {}
+}
+
+.itemStat {
+  background-color: #fff;
+  padding: rem(25) rem(30);
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(0,0,0,.125);
+  }
+
+  &__header {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(10);
+  }
+
+  &__info {
+
+  }
+
+  &__icon {
+    font-size: rem(14);
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+  }
+
+  &__title {
+    font-size: rem(16);
+    line-height: math.div(24, 16);
+  }
+
+  &__count {
+    font-weight: 400;
+    font-size: rem(36);
+    line-height: math.div(43, 36);
+  }
+
+  &__statusbar {
+    background-color: #f6f8f9;
+    width: 100%;
+    height: rem(5);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__bar {
+    background-color: #000;
+    height: 100%;
+    transition: width .3s ease 0s;
+    &_green {
+      background-color: #28a745;
+    }
+
+    &_blue {
+      background-color: #007bff;
+    }
+    
+    &_yellow {
+      background-color: #ffc107;
+    }
+    
+    &_red {
+      background-color: #dc3545;
+    }
+  }
+}
