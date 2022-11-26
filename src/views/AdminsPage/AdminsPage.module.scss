@@ -1,0 +1,45 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.admin {
+  &__body {}
+
+  &__row {}
+
+  &__header {
+    margin-top: rem(40);
+    max-width: rem(380);
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__title {}
+
+  &__button {}
+
+  &__text {}
+
+  &__table {
+    :global {
+      & .table__wrapper {
+        @media (max-width:$mobileSmall) {
+          min-width: 300%;
+        }
+      }
+    }
+  }
+}

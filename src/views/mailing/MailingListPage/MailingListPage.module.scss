@@ -1,0 +1,18 @@
+@use "sass:math";
+@import "@mixins";
+
+.mailing {
+  margin: rem(20) 0px 0px 0px;
+
+  &__body {}
+
+  &__row {}
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__table {}
+}

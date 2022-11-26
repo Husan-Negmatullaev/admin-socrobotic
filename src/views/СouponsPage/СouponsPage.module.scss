@@ -1,0 +1,27 @@
+@use "sass:math";
+@import "@mixins";
+
+.coupons {
+
+  &__body {}
+
+  &__row {}
+
+  &__header {
+    text-align: center;
+    margin: rem(30) 0px;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__text {
+    font-size: rem(12);
+    line-height: math.div(16, 12);
+  }
+
+  &__table {}
+}

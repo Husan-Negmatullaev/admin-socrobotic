@@ -1,0 +1,45 @@
+@use "sass:math";
+@import "@mixins";
+
+.discount {
+  &__body {}
+
+  &__row {}
+
+  &__header {
+    margin-top: rem(20);
+
+    &:not(:last-child) {
+      margin-bottom: rem(60);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(11.2);
+    line-height: math.div(16, 11.2);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__button {}
+
+  &__form {
+    margin: rem(20) 0;
+  }
+
+  &__input {
+    font-size: rem(14);
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use "sass:math";
+@import "@mixins";
+
+.mailingTable {}
+
+.explain {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__content {
+    background-color: #E6E8E9;
+    padding: rem(20);
+    border-radius: 15px;
+  }
+
+  &__text {
+    font-size: rem(14);
+    text-align: start;
+  }
+}

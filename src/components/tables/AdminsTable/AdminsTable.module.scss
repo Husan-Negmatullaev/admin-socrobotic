@@ -1,0 +1,76 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.adminPopup {
+  &__header {
+    text-align: start;
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__title {
+    display: block;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    row-gap: rem(10);
+    column-gap: rem(10);
+  }
+
+  &__button {}
+
+  &__text {
+    font-size: rem(14);
+  }
+
+  &__subtitle {
+    text-align: start;
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__content {
+    text-align: start;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: rem(10);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__label {
+    font-size: rem(16);
+    line-height: math.div(20, 16);
+    cursor: pointer;
+    text-align: end;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    margin: rem(4) 0px 0px 0px;
+  }
+}

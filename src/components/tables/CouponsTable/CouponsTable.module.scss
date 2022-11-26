@@ -1,0 +1,60 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.coupons {
+
+  &__form {}
+
+  &__content {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+    row-gap: rem(10);
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__label {
+    flex: 0 0 30%;
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    text-align: end;
+  }
+
+  &__input {
+    flex: 1 1 auto;
+  }
+
+  &__text {
+    font-size: rem(12);
+    line-height: math.div(16, 12);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__icon {
+    color: #6a7a8c !important;
+    transition: color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #53606E !important;
+      }
+    }
+  }
+}

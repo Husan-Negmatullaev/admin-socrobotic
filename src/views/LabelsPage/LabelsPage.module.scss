@@ -1,0 +1,60 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.labels {
+  margin-top: rem(30);
+
+  &__body {}
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+
+    &_min {
+      max-width: rem(450);
+    }
+
+    &_margin {
+      &:not(:last-child) {
+        margin-bottom: rem(75);
+      }
+
+      @media (max-width:$mobile) {
+        &:not(:last-child) {
+          margin-bottom: rem(40);
+        }
+      }
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__subtitle {
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(5);
+  }
+
+  &__input {
+    flex: 0 1 rem(400);
+  }
+}
