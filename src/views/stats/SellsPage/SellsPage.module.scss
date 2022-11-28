@@ -1,0 +1,100 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.sells {
+  margin-top: rem(25);
+
+  &__body {
+  }
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: rem(90);
+
+      @media (max-width: $mobile) {
+        margin-bottom: rem(50);
+      }
+    }
+  }
+
+  &__form {
+  }
+}
+
+.formSells {
+
+  &__body {
+  }
+
+  &__column {
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    &_min {
+      max-width: rem(215);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: rem(5);
+    row-gap: rem(10);
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+
+    &_column {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: rem(5);
+    }
+  }
+
+  &__input {
+
+    &_date {
+      max-width: rem(300);
+    }
+  }
+
+  &__title {
+    font-size: rem(16);
+    line-height: math.div(20, 16);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+}
+
+.actionsSells {
+  &__pagging {
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__table {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+}

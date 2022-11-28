@@ -14,11 +14,12 @@ import {
   СouponsPage,
 } from "@views";
 import { MailingPage, MailingListPage } from "@views/mailing";
-import { BriefingPage } from "@views/stats";
+import { BriefingPage, SellsPage, ViewsPage } from "@views/stats";
 
 import { isMobile } from "@utils/helpers/isMobile.helpers.js";
 
 const App = () => {
+
   React.useEffect(() => {
     if (isMobile.any()) document.documentElement.classList.add("touch");
   }, []);
@@ -40,6 +41,8 @@ const App = () => {
         <Route path="admins" element={<AdminsPage />} />
         <Route path="labels" element={<LabelsPage />} />
         <Route path="stats" element={<BriefingPage />} />
+        <Route path="sells" element={<SellsPage />} />
+        <Route path="views" element={<ViewsPage />} />
       </Route>
     </Routes>
   );

@@ -139,7 +139,7 @@ const SideBar = () => {
                     Продажи
                   </NavLink>
                   <NavLink to="/views" className="_icon-users">
-                    Продажи
+                    Просмотры
                   </NavLink>
                 </DropdownSideBar>
               </li>

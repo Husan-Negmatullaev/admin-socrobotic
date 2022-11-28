@@ -6,7 +6,17 @@
   margin-top: rem(25);
   &__body {}
 
-  &__row {}
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    &_margin {
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+    }
+  }
 
   &__stats {}
 
@@ -27,6 +37,12 @@
   }
 
   &__button {}
+
+  &__stats {}
+
+  &__sales {}
+
+  &__chartBrief {}
 }
 
 .briefStats {
@@ -44,6 +60,14 @@
     }
 
     margin: 0 rem(-10);
+  }
+
+  &__title {
+    font-size: rem(24);
+    line-height: math.div(28.8, 24);
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
   }
 
   &__item {}
@@ -89,6 +113,7 @@
     font-weight: 400;
     font-size: rem(36);
     line-height: math.div(43, 36);
+    font-weight: 300;
   }
 
   &__statusbar {
@@ -119,4 +144,186 @@
       background-color: #dc3545;
     }
   }
+}
+
+.salesBrief {
+  background-color: #fff;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(10);
+    padding: rem(20);
+  }
+
+  &__title {
+    font-size: rem(18);
+    line-height: math.div(21, 18);
+  }
+
+  &__date {
+    font-size: rem(14);
+    line-height: math.div(18, 14);
+    text-align: end;
+  }
+
+  &__info {
+    padding: rem(20);
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(10);
+    flex-wrap: wrap;
+  }
+
+  &__content {}
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: rem(24);
+    line-height: math.div(28.8, 24);
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__text {
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+    color: #afb5c1;
+  }
+
+  &__price {
+    font-size: rem(40);
+    color: #137eff;
+    line-height: math.div(60, 40);
+  }
+
+  &__table {
+    overflow: auto;
+    padding-bottom: rem(10);
+  }
+
+  &__wrapper {
+    border-collapse: collapse;
+    background-color: #fff;
+    //border: 1px solid rgba(0, 0, 0, .1);
+    min-width: 100%;
+
+    @media (max-width:$tablet) {
+      min-width: 130%;
+    }
+
+    @media (max-width:$mobile) {
+      min-width: 150%;
+    }
+
+    @media (max-width:$mobileSmall) {
+      min-width: 200%;
+    }
+  }
+
+  &__head {
+  }
+
+  &__tr {}
+
+  &__th {
+    border-bottom: 2px solid rgba(0, 0, 0, .1);
+    text-align: start;
+    padding: rem(16);
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+  }
+
+  &__body {
+    @media (any-hover: hover) {
+      &:hover {
+        tr {
+          color: #6a7a8c;
+          background-color: #f6f8f9;
+        }
+      }
+    }
+  }
+
+  &__td {
+    padding: rem(16);
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    &_center {}
+  }
+}
+
+.chartBrief {
+  &__row {
+    display: flex;
+    gap: rem(20);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: rem(10);
+    }
+  }
+
+  &__item {
+    flex: 1 1 50%;
+  }
+
+  &__card {
+    padding: rem(20);
+    background-color: #fff;
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+
+    &_between {}
+  }
+
+  &__title {
+    font-size: rem(18);
+    line-height: math.div(21, 18);
+  }
+
+  &__date {
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+  }
+
+  &__gain {}
+
+  &__column {}
+
+  &__subtitle {
+    color: #afb5c1;
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__value {}
+
+  &__reject {}
+
+  &__icon {}
 }

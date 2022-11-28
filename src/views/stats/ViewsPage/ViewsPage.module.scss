@@ -1,0 +1,31 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.views {
+
+  &__body {}
+
+  &__row {}
+
+  &__charts {}
+}
+
+.chartsViews {
+
+  &__body {
+    max-width: rem(960);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(15);
+    row-gap: rem(25);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+  }
+}
