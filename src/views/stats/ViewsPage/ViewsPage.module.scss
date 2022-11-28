@@ -3,15 +3,28 @@
 @import "@styles-variables";
 
 .views {
-
+  margin-top: rem(40);
   &__body {}
 
   &__row {}
 
   &__charts {}
+
+  &__table {}
 }
 
 .chartsViews {
+
+  &:not(:last-child) {
+    margin-bottom: rem(40);
+  }
+
+  &__title {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
 
   &__body {
     max-width: rem(960);

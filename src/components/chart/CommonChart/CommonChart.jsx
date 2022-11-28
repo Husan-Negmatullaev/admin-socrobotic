@@ -49,7 +49,7 @@ const data = {
             label: "Заработано за неделю",
             data: [39, 29, 41, 20, 8, 6, 0],
             borderColor: "rgba(0,0,0,0.1)",
-            backgroundColor: "rgba(255,99,132, 0.3)",
+            backgroundColor: "rgba(255,99,132, 0.2)",
             backdropColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

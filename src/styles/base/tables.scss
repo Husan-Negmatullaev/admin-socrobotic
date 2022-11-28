@@ -3,7 +3,6 @@
   padding-bottom: rem(10);
 
   &_solid {
-
     .table__wrapper,
     .table__th,
     .table__td {
@@ -19,6 +18,21 @@
       &:not(:last-child) {
         border-bottom: 1px solid rgba(0, 0, 0, .1);
       }
+    }
+  }
+  
+  &_black {
+    .table__head {
+      background-color: #343a40;
+    }
+
+    .table__th,
+    .table__td {
+      border-color: #454d55;
+    }
+
+    .table__th {
+      color: #fff;
     }
   }
 

@@ -74,6 +74,11 @@
       color: #381be7;
     }
   }
+
+  &_size {
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+  }
 }
 
 .wrapper-container {
