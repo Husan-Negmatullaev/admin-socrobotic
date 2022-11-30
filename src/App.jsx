@@ -15,6 +15,7 @@ import {
 } from "@views";
 import { MailingPage, MailingListPage } from "@views/mailing";
 import { BriefingPage, SellsPage, ViewsPage } from "@views/stats";
+import { CategoriesPage, AddCategory, NewHeading, AllHeadings, ListHeadings } from "@views/catalog-and-products";
 
 import { isMobile } from "@utils/helpers/isMobile.helpers.js";
 
@@ -43,6 +44,13 @@ const App = () => {
         <Route path="stats" element={<BriefingPage />} />
         <Route path="sells" element={<SellsPage />} />
         <Route path="views" element={<ViewsPage />} />
+        <Route path="categories/">
+          <Route index element={<CategoriesPage />} />
+          <Route path="add" element={<AddCategory />} />
+          <Route path="new-heading" element={<NewHeading />} />
+          <Route path="all-headings" element={<AllHeadings />} />
+          <Route path="list-headings" element={<ListHeadings />} />
+        </Route>
       </Route>
     </Routes>
   );

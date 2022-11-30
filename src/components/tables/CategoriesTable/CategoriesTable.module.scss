@@ -1,0 +1,36 @@
+@import "@mixins";
+
+.button {
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: rem(3);
+  flex-direction: row-reverse;
+
+  &_red {
+    color: red;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #dc0000;
+      }
+    }
+  }
+
+  &_green {
+    color: green;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #005d00;
+      }
+    }
+  }
+
+  &_grey {
+    @media (any-hover: hover) {
+      &:hover {
+        color: #53606E;
+      }
+    }
+  }
+}

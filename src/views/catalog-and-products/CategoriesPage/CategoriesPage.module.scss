@@ -1,0 +1,18 @@
+@use "sass:math";
+@import "@mixins";
+
+.categories {
+  margin-top: rem(20);
+
+  &__body {}
+
+  &__row {}
+
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__button {}
+}

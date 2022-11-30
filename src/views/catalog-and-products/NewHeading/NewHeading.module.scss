@@ -1,0 +1,253 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.heading {
+  margin-top: rem(20);
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(11.2);
+    line-height: math.div(21, 11.2);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__form {
+  }
+}
+
+.formHeading {
+  max-width: rem(710);
+
+  &__body {
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    row-gap: rem(15);
+
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+
+    &_start {
+      align-items: start;
+      @media (max-width: $tablet) {
+        align-items: stretch;
+      }
+    }
+
+    &_right {
+      justify-content: flex-end;
+    }
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: stretch;
+      row-gap: rem(10);
+    }
+  }
+
+  &__column {
+    flex: 0 1 50%;
+
+    &_full {
+      flex: 1 1 100%;
+    }
+
+    &_min {
+      flex: 0 1 49%;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: rem(14);
+    line-height: math.div(18, 14);
+    cursor: pointer;
+
+    @media (min-width: $tablet) {
+      text-align: end;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+
+    &_title {
+      text-decoration: none !important;
+      cursor: auto;
+    }
+
+    &_bold {
+      font-weight: 700;
+      text-align: start;
+    }
+  }
+
+  &__input {
+    font-size: rem(14);
+
+    &_min {
+      max-width: rem(100);
+      @media (max-width: $tablet) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__select {
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: rem(100);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: rem(5);
+
+    &::before {
+      transition: transform 0.3s ease 0s;
+    }
+
+    &_active {
+      &::before {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__spoller {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.8s ease 0s;
+
+    &_show {
+      max-height: rem(999);
+      height: auto;
+
+      &.formHeading__spoller_margin {
+        max-height: rem(300);
+        margin-bottom: rem(20);
+      }
+    }
+
+    &_margin {
+      transition: max-height 0.5s ease 0s, margin 0.5s ease 0s;
+    }
+  }
+
+  &__text {
+    font-size: rem(11.2);
+    line-height: math.div(21, 11.2);
+
+    @media (min-width: $tablet) {
+      text-align: end;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(8);
+
+    //&:not(:last-child) {
+    margin-bottom: rem(30);
+    //}
+
+    @media (max-width: $tablet) {
+      //flex-direction: column;
+      align-items: flex-start;
+      //&:not(:last-child) {
+      margin-bottom: rem(20);
+      //}
+    }
+
+    &_margin {
+      margin-bottom: 0;
+    }
+  }
+
+  &__checkbox {
+
+  }
+}
+
+.formPopup {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__image {
+    cursor: pointer;
+    max-width: rem(155);
+    margin: 0 auto;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    font-size: rem(14);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    &_image {
+      display: none;
+    }
+  }
+}

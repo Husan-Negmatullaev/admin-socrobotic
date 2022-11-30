@@ -20,7 +20,7 @@
       }
     }
   }
-  
+
   &_black {
     .table__head {
       background-color: #343a40;
@@ -41,22 +41,24 @@
     border: 1px solid rgba(0, 0, 0, .1);
     min-width: 100%;
 
-    @media (max-width:$tablet) {
+    @media (max-width: $tablet) {
       min-width: 130%;
     }
 
-    @media (max-width:$mobile) {
+    @media (max-width: $mobile) {
       min-width: 150%;
     }
 
-    @media (max-width:$mobileSmall) {
+    @media (max-width: $mobileSmall) {
       min-width: 200%;
     }
   }
 
-  &__head {}
+  &__head {
+  }
 
-  &__tr {}
+  &__tr {
+  }
 
   &__th {
     border: 1px solid rgba(0, 0, 0, .1);
@@ -67,7 +69,8 @@
     text-align: left;
   }
 
-  &__body {}
+  &__body {
+  }
 
   &__td {
     padding: rem(16);
@@ -85,27 +88,34 @@
     @extend .button-link;
   }
 
-  &__footer {}
+  &__footer {
+  }
 }
 
 .table-blue {
   overflow: auto;
   padding-bottom: rem(10);
 
+  &_text-bottom {
+    th {
+      vertical-align: bottom;
+    }
+  }
+
   &__content {
     border-collapse: collapse;
     border: 1px solid rgba(0, 0, 0, .1);
     min-width: 100%;
 
-    @media (max-width:$tablet) {
+    @media (max-width: $tablet) {
       min-width: 130%;
     }
 
-    @media (max-width:$mobile) {
+    @media (max-width: $mobile) {
       min-width: 150%;
     }
 
-    @media (max-width:$mobileSmall) {
+    @media (max-width: $mobileSmall) {
       min-width: 200%;
     }
   }
@@ -132,7 +142,8 @@
     }
   }
 
-  &__body {}
+  &__body {
+  }
 
   &__td {
     padding: rem(16);
@@ -149,10 +160,13 @@
 
   &__message {
 
-    &_success {}
+    &_success {
+    }
 
-    &_danger {}
+    &_danger {
+    }
   }
 
-  &__button {}
+  &__button {
+  }
 }

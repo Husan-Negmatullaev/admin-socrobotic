@@ -1,0 +1,123 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.headings {
+  margin-top: rem(20);
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__form {
+  }
+
+  &__text {
+    line-height: math.div(21, 11.2);
+  }
+
+  &__type {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: rem(4);
+
+    &_red {
+      color: red;
+      @media (any-hover: hover) {
+        &:hover {
+          color: #dc0000;
+        }
+      }
+    }
+
+    &_green {
+      color: green;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: #005d00;
+        }
+      }
+    }
+
+    &_grey {
+      @media (any-hover: hover) {
+        &:hover {
+          color: #53606E;
+        }
+      }
+    }
+  }
+}
+
+.formHeadings {
+
+  &:not(:last-child) {
+    margin-bottom: rem(25);
+  }
+
+  &__row {
+  }
+
+  &__column {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &_title {
+      cursor: auto;
+      text-decoration: none !important;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+
+    @media (max-width: $tablet) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    font-size: rem(14);
+    max-width: rem(320);
+    padding: rem(7.5) rem(12) !important;
+
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__button {
+  }
+
+  &__select {
+  }
+}

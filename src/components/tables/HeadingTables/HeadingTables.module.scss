@@ -1,0 +1,176 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.table {
+
+  &__link {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+}
+
+.popup {
+
+  &__header {
+    text-align: start;
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__title {
+    font-size: rem(21);
+    font-weight: 700;
+    line-height: math.div(26, 21);
+
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__text {
+    font-size: rem(11.2);
+    line-height: math.div(21, 11.2);
+  }
+
+  &__body {
+  }
+
+  &__breadcrumbs {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: rem(5);
+    row-gap: rem(10);
+  }
+
+  &__item {
+    padding-right: rem(15);
+    position: relative;
+
+    &:not(:last-child) {
+      &::before {
+        content: "/";
+        position: absolute;
+        top: rem(1);
+        right: 0;
+      }
+    }
+  }
+
+  &__link {
+    font-size: rem(15) !important;
+    cursor: auto;
+
+    &_active {
+      color: #2962ff;
+      cursor: pointer;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: #381be7;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__form {
+  }
+}
+
+.formPopup {
+
+  //& * {
+  //  outline: 1px solid #000000;
+  //}
+
+  &__body {
+  }
+
+  &__row {
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(106, 122, 140, 0.5);
+      padding-bottom: rem(15);
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__column {
+    text-align: start;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    text-align: start;
+    cursor: pointer;
+    line-height: math.div(21, 16);
+    font-size: rem(16);
+
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: rem(120);
+  }
+
+  &__input {
+    font-size: rem(16);
+
+    &_file {
+      @media (max-width: $tablet) {
+        font-size: rem(14);
+        width: 100%;
+      }
+    }
+
+    &_checkbox {
+      margin-top: rem(3);
+    }
+  }
+
+  &__text {
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: rem(5);
+  }
+}

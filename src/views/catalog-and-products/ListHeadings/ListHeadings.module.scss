@@ -1,0 +1,84 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.headings {
+  margin-top: rem(20);
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header {
+    max-width: rem(350);
+    margin: 0 auto;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(60);
+    }
+
+    @media (max-width: $tablet) {
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__form {
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__table {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__pagging {}
+}
+
+.formHeader {
+
+  &__row {
+  }
+
+  &__column {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__input {
+    max-width: rem(750);
+
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+  }
+
+  &__button {
+  }
+}

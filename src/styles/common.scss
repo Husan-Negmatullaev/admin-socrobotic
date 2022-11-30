@@ -79,6 +79,10 @@
     font-size: rem(14);
     line-height: math.div(20, 14);
   }
+
+  &_bold {
+    font-weight: 700;
+  }
 }
 
 .wrapper-container {

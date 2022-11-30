@@ -55,12 +55,6 @@ const SideBar = () => {
                   Настройки бота
                 </NavLink>
               </li>
-              {/* <li className={styles.menu__item}>
-                <NavLink to="/shops" className={({ isActive }) => activeClassName(isActive, "_icon-money-bill-alt")}>Пополнить баланс</NavLink>
-              </li>
-              <li className={styles.menu__item}>
-                <NavLink to="/shops" className={({ isActive }) => activeClassName(isActive, "_icon-cogs")}>Настройки</NavLink>
-              </li> */}
             </ul>
             <ul className={styles.menu__list}>
               <li>
@@ -140,6 +134,19 @@ const SideBar = () => {
                   </NavLink>
                   <NavLink to="/views" className="_icon-users">
                     Просмотры
+                  </NavLink>
+                </DropdownSideBar>
+              </li>
+              <li>
+                <DropdownSideBar title="Каталог и товары" hidden>
+                  <NavLink end to="/categories" className="_icon-align-left">
+                    Категории
+                  </NavLink>
+                  <NavLink to="/categories/new-heading" className="_icon-cart-plus">
+                    Новая позиция
+                  </NavLink>
+                  <NavLink to="/categories/all-headings" className="_icon-box">
+                    Все позиции
                   </NavLink>
                 </DropdownSideBar>
               </li>
