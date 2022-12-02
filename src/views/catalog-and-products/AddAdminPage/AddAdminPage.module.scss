@@ -1,0 +1,125 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.admin {
+  margin-top: rem(25);
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__title {
+    font-size: rem(30);
+    line-height: math.div(36, 30);
+    font-weight: 400;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__description {
+    max-width: rem(700);
+
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__text {
+    font-size: rem(14);
+    line-height: math.div(24, 16);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__bold {
+    font-weight: 700;
+  }
+
+  &__table {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__link {
+  }
+
+  &__button {
+  }
+}
+
+.popupAdmin {
+
+  &__title {
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__formPopup {
+  }
+
+  &__body {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: rem(10);
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__column {
+    text-align: end;
+
+    @media (max-width: $tablet) {
+      text-align: start;
+    }
+  }
+
+  &__label {
+    font-size: rem(16);
+    line-height: math.div(20, 16);
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__input {
+    font-size: rem(15);
+  }
+
+  &__button {}
+}

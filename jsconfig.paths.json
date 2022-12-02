@@ -16,7 +16,7 @@
       "@services": ["services"],
       "@hooks": ["services/hooks"],
       "@fonts": ["assets/fonts"],
-      "@images": ["assets/img"],
+      "@images": ["assets/img"]
     }
   }
 }

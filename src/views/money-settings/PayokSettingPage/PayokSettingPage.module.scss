@@ -1,0 +1,103 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.payok {
+  margin-top: rem(25);
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__title {
+  }
+
+  &__form {
+  }
+
+  &__link {
+    color: #2962ff;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #381be7;
+      }
+    }
+  }
+}
+
+.formPayok {
+
+  &__body {
+    max-width: rem(710);
+
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    row-gap: rem(15);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &_right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__column {
+    flex: 0 1 50%;
+
+    @media (min-width: $tablet) {
+      text-align: end;
+    }
+
+    &_min {
+      text-align: start;
+      flex: 0 1 49%;
+    }
+  }
+
+  &__label {
+    font-size: rem(15);
+    line-height: math.div(19, 15);
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__input {
+  }
+
+  &__buttons {
+
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-right: rem(10);
+    }
+  }
+}

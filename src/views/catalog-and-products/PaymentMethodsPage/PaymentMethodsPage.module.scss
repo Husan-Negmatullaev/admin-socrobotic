@@ -1,0 +1,71 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.payment {
+  margin-top: rem(25);
+
+  &__body {}
+
+  &__row {}
+
+  &__title {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__content {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    //justify-content: center;
+    flex-wrap: wrap;
+    column-gap: rem(20);
+    row-gap: rem(25);
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 0 1 percent(190, 1200);
+
+  }
+}
+
+.itemPayment {
+  padding: rem(20);
+  text-align: center;
+
+  &__title {
+    font-size: rem(15) !important;
+    line-height: math.div(20, 15) !important;
+    &:not(:last-child) {
+      margin-bottom: rem(5);
+    }
+  }
+
+  &__type {
+    font-size: rem(15);
+    line-height: math.div(20, 15);
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__logo {
+    img {
+      max-width: 100%;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__link {
+    @extend .itemPayment__title;
+  }
+}

@@ -1,0 +1,32 @@
+@use "sass:math";
+@import "@mixins";
+
+.suppliers {
+  margin-top: rem(40);
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__title {
+  }
+
+  &__button {
+  }
+
+  &__table {
+  }
+}

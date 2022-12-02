@@ -34,7 +34,7 @@ const ListHeadings = () => {
               <div className={styles.formHeader__column}>
                 <div className={styles.formHeader__buttons}>
                   <button
-                    type={"button"}
+                    type={"submit"}
                     className={clsx(
                       styles.formHeader__button,
                       "button button_success"

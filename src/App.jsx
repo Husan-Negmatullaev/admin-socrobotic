@@ -15,12 +15,22 @@ import {
 } from "@views";
 import { MailingPage, MailingListPage } from "@views/mailing";
 import { BriefingPage, SellsPage, ViewsPage } from "@views/stats";
-import { CategoriesPage, AddCategory, NewHeading, AllHeadings, ListHeadings } from "@views/catalog-and-products";
+import {
+  CategoriesPage,
+  AddCategory,
+  NewHeading,
+  AllHeadings,
+  ListHeadings,
+  PromoPage,
+  ListSuppliersPage,
+  AddAdminPage,
+} from "@views/catalog-and-products";
+import { PayokSettingPage, QiwiSettingPage, UMoneySettingPage } from "@views/money-settings";
 
 import { isMobile } from "@utils/helpers/isMobile.helpers.js";
+import PaymentMethodsPage from "./views/catalog-and-products/PaymentMethodsPage/PaymentMethodsPage";
 
 const App = () => {
-
   React.useEffect(() => {
     if (isMobile.any()) document.documentElement.classList.add("touch");
   }, []);
@@ -50,6 +60,15 @@ const App = () => {
           <Route path="new-heading" element={<NewHeading />} />
           <Route path="all-headings" element={<AllHeadings />} />
           <Route path="list-headings" element={<ListHeadings />} />
+          <Route path="promo" element={<PromoPage />} />
+          <Route path="list-suppliers" element={<ListSuppliersPage />} />
+          <Route path="add-admin" element={<AddAdminPage />} />
+          <Route path="payment-method" element={<PaymentMethodsPage />} />
+        </Route>
+        <Route path="methods/">
+          <Route path="qiwi" element={<QiwiSettingPage />} />
+          <Route path="payok" element={<PayokSettingPage />} />
+          <Route path="umoney" element={<UMoneySettingPage />} />
         </Route>
       </Route>
     </Routes>

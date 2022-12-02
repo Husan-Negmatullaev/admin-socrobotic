@@ -1,0 +1,124 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.promo {
+  margin-top: rem(20);
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__table {
+  }
+
+  &__header {
+    max-width: rem(580);
+    margin: 0 auto;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__text {
+  }
+  
+  &__icon {
+    
+    @media (any-hover: hover) {
+      &:hover {
+        color: #53606E;
+      }
+    }
+  }
+
+}
+
+.popupPromo {
+
+  &__header {
+    margin-bottom: rem(20);
+  }
+
+  &__title {
+    font-size: rem(24);
+    line-height: math.div(28, 24);
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+  }
+
+  &__form {
+  }
+}
+
+.formPopup {
+
+  &__body {
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__row {
+    display: grid;
+    gap: rem(10);
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+    }
+  }
+
+  &__column {
+    text-align: start;
+    @media (min-width: $tablet) {
+      text-align: end;
+    }
+  }
+
+  &__label {
+    font-size: rem(16);
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__input {
+    font-size: rem(15);
+  }
+
+  &__select {
+  }
+
+  &__button {
+  }
+}

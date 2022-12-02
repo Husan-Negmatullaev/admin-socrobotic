@@ -83,16 +83,14 @@ const SideBar = () => {
               <li>
                 <DropdownSideBar title="Рассылки" hidden>
                   <NavLink end to="/mailing" className="_icon-envelope">
-                    {" "}
-                    Новая рассылка{" "}
+                    Новая рассылка
                   </NavLink>
                   <NavLink
                     end
                     to="/mailing/list"
                     className="_icon-clipboard-list"
                   >
-                    {" "}
-                    История рассылок{" "}
+                    История рассылок
                   </NavLink>
                 </DropdownSideBar>
               </li>
@@ -103,24 +101,20 @@ const SideBar = () => {
                     to="/permanent_discount"
                     className="_icon-percent"
                   >
-                    {" "}
-                    Вечная скидка{" "}
+                    Вечная скидка
                   </NavLink>
                   <NavLink end to="/coupons" className="_icon-percentage">
-                    {" "}
-                    Купоны{" "}
+                    Купоны
                   </NavLink>
                 </DropdownSideBar>
               </li>
               <li>
                 <DropdownSideBar title="Другое" hidden>
                   <NavLink to="/admins" className="_icon-user-shield">
-                    {" "}
-                    Администраторы{" "}
+                    Администраторы
                   </NavLink>
                   <NavLink to="/labels" className="_icon-tags">
-                    {" "}
-                    Метки{" "}
+                    Метки
                   </NavLink>
                 </DropdownSideBar>
               </li>
@@ -142,13 +136,57 @@ const SideBar = () => {
                   <NavLink end to="/categories" className="_icon-align-left">
                     Категории
                   </NavLink>
-                  <NavLink to="/categories/new-heading" className="_icon-cart-plus">
+                  <NavLink
+                    to="/categories/new-heading"
+                    className="_icon-cart-plus"
+                  >
                     Новая позиция
                   </NavLink>
                   <NavLink to="/categories/all-headings" className="_icon-box">
                     Все позиции
                   </NavLink>
+                  <NavLink to="/categories/promo" className="_icon-percentage">
+                    Промокоды
+                  </NavLink>
+                  <NavLink
+                    className={"_icon-parachute-box"}
+                    to="/categories/list-suppliers"
+                  >
+                    Спиcок поставщиков
+                  </NavLink>
                 </DropdownSideBar>
+              </li>
+            </ul>
+            <ul className={styles.menu__list}>
+              <li>
+                <NavLink
+                  to="/categories/promo"
+                  className={({ isActive }) =>
+                    activeClassName(isActive, "_icon-percentage")
+                  }
+                >
+                  Промокоды
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/categories/add-admin"
+                  className={({ isActive }) =>
+                    activeClassName(isActive, "_icon-user-lock")
+                  }
+                >
+                  Администраторы
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/categories/payment-method"
+                  className={({ isActive }) =>
+                    activeClassName(isActive, "_icon-cc-visa")
+                  }
+                >
+                  Способы оплаты
+                </NavLink>
               </li>
             </ul>
           </nav>

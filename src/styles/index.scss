@@ -148,7 +148,10 @@ body {
 @import "app";
 
 .page {
-  &__body {}
+  height: 100%;
+  &__body {
+    height: 100%;
+  }
 
   &__row {
     &:not(:last-child) {
