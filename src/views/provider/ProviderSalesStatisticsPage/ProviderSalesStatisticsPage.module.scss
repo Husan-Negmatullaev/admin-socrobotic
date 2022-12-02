@@ -1,0 +1,124 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.sales {
+  margin-top: rem(25);
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+
+    @media (max-width: $tablet) {
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__form {
+  }
+}
+
+.formSales {
+  &:not(:last-child) {
+    margin-bottom: rem(40);
+  }
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__column {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    font-size: rem(16);
+    line-height: math.div(20, 16);
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &_min {
+      font-size: rem(14);
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__select {
+  }
+
+  &__title {
+    font-size: rem(16);
+    line-height: math.div(20, 16);
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__dates {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: rem(5);
+    row-gap: rem(10);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__date {
+    max-width: rem(300);
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__buttons {
+    display: inline-flex;
+    gap: rem(10);
+  }
+
+  &__button {
+  }
+}

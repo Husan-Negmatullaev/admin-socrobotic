@@ -1,0 +1,189 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.provider {
+  margin-top: rem(25);
+
+  &__body {
+  }
+
+  &__row {
+  }
+
+  &__header {
+    max-width: rem(710);
+    margin: 0 auto;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(12);
+    line-height: math.div(18, 12);
+  }
+
+  &__form {
+  }
+}
+
+.formProvider {
+
+  &__body {
+    max-width: rem(710);
+    margin: 0 auto;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(10);
+    row-gap: rem(15);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__column {
+    flex: 0 1 75%;
+    @media (min-width: $tablet) {
+      text-align: end;
+    }
+
+    &_label {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: rem(15);
+    line-height: math.div(20, 15);
+
+    &:not(&_margin) {
+      margin-top: rem(5);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(2);
+    }
+
+    &_bold {
+      font-weight: 500;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__input {
+    font-size: rem(15);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__textarea {
+    min-height: rem(130);
+    font-size: rem(15);
+    resize: vertical;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__select {
+    font-size: rem(15);
+  }
+
+  &__buttons {
+    display: flex;
+    gap: rem(10);
+    //align-items: center;
+  }
+
+  &__button {
+  }
+
+  &__actions {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: flex-start;
+    //flex-wrap: wrap;
+    gap: rem(5);
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__checkbox {
+    margin-top: rem(3);
+  }
+}
+
+.formPopup {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__image {
+    cursor: pointer;
+    max-width: rem(155);
+    margin: 0 auto;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    font-size: rem(14);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    &_image {
+      display: none;
+    }
+  }
+}

@@ -26,6 +26,7 @@ import {
   AddAdminPage,
 } from "@views/catalog-and-products";
 import { PayokSettingPage, QiwiSettingPage, UMoneySettingPage } from "@views/money-settings";
+import { ProviderListPage, ProviderNewPositionPage, ProviderSalesStatisticsPage } from "@views/provider";
 
 import { isMobile } from "@utils/helpers/isMobile.helpers.js";
 import PaymentMethodsPage from "./views/catalog-and-products/PaymentMethodsPage/PaymentMethodsPage";
@@ -69,6 +70,11 @@ const App = () => {
           <Route path="qiwi" element={<QiwiSettingPage />} />
           <Route path="payok" element={<PayokSettingPage />} />
           <Route path="umoney" element={<UMoneySettingPage />} />
+        </Route>
+        <Route path="provider/">
+          <Route index element={<ProviderListPage />} />
+          <Route path={"new-position"} element={<ProviderNewPositionPage />} />
+          <Route path={"stats"} element={<ProviderSalesStatisticsPage />} />
         </Route>
       </Route>
     </Routes>

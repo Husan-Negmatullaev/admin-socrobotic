@@ -32,8 +32,9 @@
 
   &__item {
     flex: 0 1 percent(190, 1200);
-
   }
+
+  &__form {}
 }
 
 .itemPayment {
@@ -68,4 +69,57 @@
   &__link {
     @extend .itemPayment__title;
   }
+}
+
+.formPayment {
+  margin-top: rem(40);
+  &__body {}
+
+  &__row {}
+
+  &__column {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__label {
+    font-size: rem(18);
+    line-height: math.div(22, 18);
+    cursor: pointer;
+    display: inline-block;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(12.5);
+    line-height: math.div(16, 12.5);
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__input {}
+
+  &__button {}
 }

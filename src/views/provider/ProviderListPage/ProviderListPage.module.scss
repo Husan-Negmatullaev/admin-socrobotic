@@ -1,0 +1,56 @@
+@use "sass:math";
+@import "@mixins";
+@import "@styles-variables";
+
+.provider {
+  margin-top: rem(25);
+
+  &__body {}
+
+  &__row {}
+
+  &__content {}
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(55);
+    }
+
+    @media (max-width: $tablet) {
+      &:not(:last-child) {
+        margin-bottom: rem(35);
+      }
+    }
+  }
+}
+
+.itemProvider {
+
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    font-size: rem(16);
+    line-height: math.div(20, 16);
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__table {}
+
+  &__button {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+}

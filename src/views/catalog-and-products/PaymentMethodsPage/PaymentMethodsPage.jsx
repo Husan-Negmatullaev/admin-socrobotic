@@ -8,6 +8,9 @@ import uMoney from "@images/payment-logos/02.png";
 import payok from "@images/payment-logos/03.png";
 
 const PaymentMethodsPage = () => {
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+  };
 
   return (
     <div className={clsx(styles.payment, "page")}>
@@ -80,6 +83,22 @@ const PaymentMethodsPage = () => {
               </Link>
             </div>
           </div>
+          <form onSubmit={handleFormSubmit} className={clsx(styles.payment__form, styles.formPayment)}>
+            <div className={styles.formPayment__body}>
+              <div className={styles.formPayment__row}>
+                <div className={styles.formPayment__column}>
+                  <label htmlFor="0" className={styles.formPayment__label}>Реферальная система для телеграм</label>
+                  <p className={clsx(styles.formPayment__text, "small")}>Чтобы включить рефералтную систему для телеграм, просто укажите процент отчислений больше нуля</p>
+                </div>
+                <div className={styles.formPayment__column}>
+                  <div className={styles.formPayment__actions}>
+                    <input placeholder={"1-99"} id={"0"} type="text" className={clsx(styles.formPayment__input, "input")}/>
+                    <button type="submit" className={clsx(styles.formPayment__button, "button button_success")}>Сохранить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
