@@ -1,6 +1,7 @@
 import React from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import PropTypes from "prop-types";
 
 import styles from "./PopupEditableButton.module.scss";
 
@@ -11,7 +12,7 @@ const PopupEditableButton = (props) => {
     buttonTitle,
     classes,
     children,
-    popupTitle = "Редактировать элемент"
+    popupTitle = "Редактировать элемент",
   } = props;
 
   const openPopup = () => Popup.fire({
@@ -34,7 +35,14 @@ const PopupEditableButton = (props) => {
     >
       {buttonTitle}
     </button>
-  )
-}
+  );
+};
+
+PopupEditableButton.propTypes = {
+  buttonTitle: PropTypes.string,
+  classes: PropTypes.object,
+  children: PropTypes.element,
+  popupTitle: PropTypes.string,
+};
 
 export default PopupEditableButton;

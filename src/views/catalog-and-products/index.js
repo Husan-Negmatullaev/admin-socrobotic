@@ -17,5 +17,5 @@ export {
   PromoPage,
   ListSuppliersPage,
   AddAdminPage,
-  PaymentMethodsPage
+  PaymentMethodsPage,
 };

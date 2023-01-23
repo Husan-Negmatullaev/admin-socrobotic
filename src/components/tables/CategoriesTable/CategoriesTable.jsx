@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import CategoriesTableRow from "./CategoriesTableRow";
+import PropTypes from "prop-types";
 
 const CategoriesTable = ({ classes }) => {
   return (
@@ -36,6 +37,10 @@ const CategoriesTable = ({ classes }) => {
       </table>
     </div>
   );
+};
+
+CategoriesTable.propTypes = {
+  classes: PropTypes.object,
 };
 
 export default CategoriesTable;

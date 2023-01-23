@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import PropTypes from "prop-types";
 
 import CouponsTableRow from "./CouponsTableRow";
 
@@ -64,7 +65,11 @@ const CouponsTable = ({ classes }) => {
         </tfoot>
       </table>
     </div>
-  )
-}
+  );
+};
+
+CouponsTable.propTypes = {
+  classes: PropTypes.object,
+};
 
 export default CouponsTable;

@@ -3,5 +3,5 @@ import PopupEditableButton from "./PopupEditableButton/PopupEditableButton";
 
 export {
   PopupTemplateButton,
-  PopupEditableButton
+  PopupEditableButton,
 };

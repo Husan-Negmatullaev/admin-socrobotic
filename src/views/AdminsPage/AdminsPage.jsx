@@ -24,7 +24,7 @@ const AdminsPage = () => {
       </form>
     ),
     confirmButtonColor: "#3085d6",
-    title: "Добавить нового админа"
+    title: "Добавить нового админа",
   });
 
   return (
@@ -42,7 +42,7 @@ const AdminsPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default AdminsPage;

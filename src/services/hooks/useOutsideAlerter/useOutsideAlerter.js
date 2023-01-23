@@ -15,9 +15,9 @@ export default function useOutsideAlerter(initialIsVisible) {
     document.addEventListener("click", handleClickOutside, true);
 
     return () => {
-      document.addEventListener("click", handleClickOutside, true)
+      document.addEventListener("click", handleClickOutside, true);
     };
-  }, [])
+  }, []);
 
   return { ref, isShow, setIsShow };
 }

@@ -3,4 +3,4 @@ export const LocalStorage = {
   set(key, value) { },
   remove(key) { },
   clear() { },
-}
+};

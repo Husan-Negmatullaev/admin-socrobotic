@@ -9,5 +9,5 @@ export {
   MailingListTable,
   CouponsTable,
   AdminsTable,
-  CategoriesTable
+  CategoriesTable,
 };

@@ -44,8 +44,8 @@ const QiwiSettingPage = () => {
                     Токен
                   </label>
                   <p className={clsx(styles.formQiwi__text, "text")}>
-                    При получении токена нужно указать разрешения 'Просмотр
-                    истории платежей' и 'Запрос информации о профиле кошелька'.{" "}
+                    При получении токена нужно указать разрешения &apos;Просмотр
+                    истории платежей&apos; и &apos;Запрос информации о профиле кошелька&apos;.{" "}
                     <a
                       href={"https://qiwi.com/api"}
                       rel={"noreferrer"}
@@ -71,7 +71,7 @@ const QiwiSettingPage = () => {
                     Дизайн
                   </label>
                   <p className={clsx(styles.formQiwi__text, "text")}>
-                    Чтобы использовать ваш дизайн, введите в поле "Дизайн" текст
+                    Чтобы использовать ваш дизайн, введите в поле &quot;Дизайн&quot; текст
                     в кавычках, полученную на странице
                     <a
                       href={"https://qiwi.com/p2p-admin/transfers/link"}
@@ -82,7 +82,7 @@ const QiwiSettingPage = () => {
                       {" "}
                       настройка дизайна P2P{" "}
                     </a>
-                    после текста "themeCode":
+                    после текста &quot;themeCode&quot;:
                   </p>
                 </div>
                 <div className={styles.formQiwi__column}>

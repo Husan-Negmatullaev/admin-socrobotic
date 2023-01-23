@@ -13,7 +13,7 @@ const ListSuppliersPage = () => {
     title: "Новый поставщик",
     input: "text",
     inputPlaceholder: "Введите логин поставщика на сайте",
-    confirmButtonColor: "#3085d6"
+    confirmButtonColor: "#3085d6",
   });
 
   return (

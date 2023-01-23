@@ -21,7 +21,7 @@ const LabelsPage = () => {
           <h5 className={clsx(styles.labels__subtitle, "title title_small")}>Введите название метки.</h5>
           <p className={clsx(styles.labels__text, "text")}>Это может быть название магазина, где вы покупаете рекламу, либо любое другое слово</p>
           <form onSubmit={handleSubmitForm} className={styles.labels__form}>
-            <input maxlength="32" className={clsx(styles.labels__input, "input")} />
+            <input maxLength="32" className={clsx(styles.labels__input, "input")} />
             <button type="button" className="button button_success-outline">Добавить</button>
           </form>
         </div>
@@ -56,7 +56,7 @@ const LabelsPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default LabelsPage;

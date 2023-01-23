@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-import uploadIcon from "@images/icons/cloud-icon.svg"
+import uploadIcon from "@images/icons/cloud-icon.svg";
 import styles from "./MailingPage.module.scss";
 
 const Popup = withReactContent(Swal);
@@ -65,7 +65,7 @@ const MailingPage = () => {
           </div>
           <button type={"submit"} className="button button_success-outline">Создать</button>
         </form>
-      )
+      );
     }
   }, [typeButton]);
 
@@ -86,7 +86,7 @@ const MailingPage = () => {
             &lt;u&gt;<u>Подчёркнутый текст</u>&lt;/u&gt;<br />
             &lt;strike&gt;<strike>Перечёркнутый текст</strike>&lt;/strike&gt;<br />
             &lt;code&gt;<code>Выделенный текст</code>&lt;/code&gt;<br />
-            &lt;a href="Куда ведёт ссылка"&gt;<a href="Куда ведёт ссылка" className={clsx(styles.mailing__link, "button-link")}>Текст ссылки</a>&lt;/a&gt;
+            &lt;a href=&quot;Куда ведёт ссылка&quot;&gt;<a href="Куда ведёт ссылка" className={clsx(styles.mailing__link, "button-link")}>Текст ссылки</a>&lt;/a&gt;
           </p>
         </div>
         <div className={clsx(styles.mailing__row, "page__row")}>
@@ -125,7 +125,7 @@ const MailingPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default MailingPage;

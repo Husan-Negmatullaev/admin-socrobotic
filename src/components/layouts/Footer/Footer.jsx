@@ -10,7 +10,7 @@ const Footer = () => {
         <a className={styles.footer__link} href="https://socrobotic.io/" target="_blank" rel="noreferrer">socrobotic.io</a>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

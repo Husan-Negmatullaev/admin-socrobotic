@@ -73,10 +73,10 @@ const SideBar = () => {
                     Кнопки
                   </NavLink>
                   <NavLink to="/support" className="_icon-gift">
-                    Раздел "Помощь"
+                    Раздел &quot;Помощь&quot;
                   </NavLink>
                   <NavLink to="/" className="_icon-toolbox">
-                    Раздел "Подарки"
+                    Раздел &quot;Подарки&quot;
                   </NavLink>
                 </DropdownSideBar>
               </li>

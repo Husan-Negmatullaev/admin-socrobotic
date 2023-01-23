@@ -21,7 +21,7 @@ const SupportPage = () => {
     cancelButtonText: "Cancel",
     confirmButtonColor: "#3085d6",
     allowOutsideClick: () => {
-      const popup = Swal.getPopup()
+      const popup = Swal.getPopup();
       popup.classList.remove("swal2-show");
 
       setTimeout(() => {
@@ -47,7 +47,7 @@ const SupportPage = () => {
       <div className={clsx(styles.support__body, "page__body")}>
         <div className={clsx(styles.support__row, "page__row")}>
           <div className={styles.support__header}>
-            <h2 className={clsx(styles.support__title, "title title_medium")}>Раздел "Помощь"</h2>
+            <h2 className={clsx(styles.support__title, "title title_medium")}>Раздел &quot;Помощь&quot;</h2>
             <button onClick={openPopup} type="button" className={clsx(styles.support__button, "button button_success-outline")}>Добавить новый пункт</button>
           </div>
           <div className={clsx(styles.support__table, "table-blue")}>
@@ -76,7 +76,7 @@ const SupportPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default SupportPage;

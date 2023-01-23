@@ -1,6 +1,6 @@
 // Получить цифры из строки
 export function getDigFromString(item) {
-  return parseInt(item.replace(/[^\d]/g, ''))
+  return parseInt(item.replace(/[^\d]/g, ''));
 }
 // Форматирование цифр типа 100 000 000
 export function getDigFormat(item) {

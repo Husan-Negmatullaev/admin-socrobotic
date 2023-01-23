@@ -1,15 +1,15 @@
 import DepositsPage from "./DepositsPage/DepositsPage";
-import PannelPage from "./PannelPage/PannelPage";
+import PanelPage from "./PannelPage/PannelPage";
 import ConstructorPage from "./ConstructorPage/ConstructorPage";
 import SupportPage from "./SupportPage/SupportPage";
 import SettingsPage from "./SettingsPage/SettingsPage";
 import PermanentDiscountPage from "./PermanentDiscountPage/PermanentDiscountPage";
-import СouponsPage from "./СouponsPage/СouponsPage"
+import СouponsPage from "./СouponsPage/СouponsPage";
 import AdminsPage from "./AdminsPage/AdminsPage";
 import LabelsPage from "./LabelsPage/LabelsPage";
 
 export {
-  PannelPage,
+  PanelPage,
   DepositsPage,
   ConstructorPage,
   SupportPage,
@@ -17,5 +17,5 @@ export {
   PermanentDiscountPage,
   СouponsPage,
   AdminsPage,
-  LabelsPage
+  LabelsPage,
 };

@@ -12,12 +12,12 @@ const Header = () => {
 
     const handleClickMenu = () => {
       document.documentElement.classList.toggle("menu-open");
-    }
+    };
 
-    current.addEventListener("click", handleClickMenu)
+    current.addEventListener("click", handleClickMenu);
 
     return () => current.removeEventListener("click", handleClickMenu);
-  }, [])
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -36,7 +36,7 @@ const Header = () => {
         </ul>
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default Header;

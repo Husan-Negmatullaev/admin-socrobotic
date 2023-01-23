@@ -22,7 +22,7 @@ const СouponsPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default СouponsPage;

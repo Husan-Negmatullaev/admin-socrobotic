@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import Swal from "sweetalert2";
+import PropTypes from "prop-types";
 import withReactContent from "sweetalert2-react-content";
 
 import HeadingTablesRow from "./HeadingTablesRow";
@@ -128,6 +129,10 @@ const HeadingTables = ({ classes }) => {
       </table>
     </div>
   );
+};
+
+HeadingTables.propTypes = {
+  classes: PropTypes.object,
 };
 
 export default HeadingTables;

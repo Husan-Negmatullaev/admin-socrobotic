@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 import styles from "./DropdownSideBar.module.scss";
 
@@ -25,7 +26,13 @@ const DropdownSideBar = ({ children, title = "Dropdown", hidden = true }) => {
         }
       </ul>
     </div>
-  )
-}
+  );
+};
+
+DropdownSideBar.propTypes = {
+  children: PropTypes.element.isRequired,
+  title: PropTypes.string,
+  hidden: PropTypes.bool,
+};
 
 export default DropdownSideBar;

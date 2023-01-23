@@ -7,7 +7,7 @@ import {
   ConstructorPage,
   DepositsPage,
   LabelsPage,
-  PannelPage,
+  PanelPage,
   PermanentDiscountPage,
   SettingsPage,
   SupportPage,
@@ -39,7 +39,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Wrapper />}>
-        <Route index element={<PannelPage />} /> {/* path="users" */}
+        <Route index element={<PanelPage />} /> {/* path="users" */}
         <Route path="deposits" element={<DepositsPage />} />
         <Route path="constructor" element={<ConstructorPage />} />
         <Route path="support" element={<SupportPage />} />

@@ -6,7 +6,7 @@ import { TableUsers } from "@components/tables";
 
 import styles from "./PannelPage.module.scss";
 
-const PannelPage = () => {
+const PanelPage = () => {
   return (
     <div className={clsx(styles.mainPannel, "page")}>
       <div className={clsx(styles.mainPannel__body, "page__body")}>
@@ -143,7 +143,7 @@ const PannelPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PannelPage;
+export default PanelPage;

@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 import TableUsersRow from "./TableUsersRow";
 
@@ -26,7 +27,11 @@ const TableUsers = ({ classes }) => {
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
-export default TableUsers
+TableUsers.propTypes = {
+  classes: PropTypes.object,
+};
+
+export default TableUsers;

@@ -82,7 +82,7 @@ const DepositsPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default DepositsPage;

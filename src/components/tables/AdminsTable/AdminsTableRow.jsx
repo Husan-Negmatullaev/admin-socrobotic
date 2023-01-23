@@ -52,7 +52,7 @@ const AdminsTableRow = () => {
     ),
     background: "#f2f4f5",
     showConfirmButton: false,
-    width: 400
+    width: 400,
   });
 
   return (
@@ -64,7 +64,7 @@ const AdminsTableRow = () => {
       <td className="table__td"><button type="button" className="button button_red-outline">Удалить</button></td>
       <td className="table__td"><button type="button" onClick={openPopup} className="button button_blue-outline">Настройки</button></td>
     </tr>
-  )
-}
+  );
+};
 
-export default AdminsTableRow
+export default AdminsTableRow;

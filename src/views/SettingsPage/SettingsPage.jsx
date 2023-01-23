@@ -27,7 +27,7 @@ const SettingsPage = () => {
             </div>
             <div className={clsx(styles.settings__item, styles.settingItem)}>
               <h5 className={clsx(styles.settingItem__title, "title")}>Укажите ваш ID телеграм, чтобы открыть панель администрирования</h5>
-              <p className={styles.settingItem__text}>После указания ID, вам будет доступна кнопка "Настройки бота" прямо в телеграм. Получить свой ID можно у <a href="https://t.me/getmyid_bot" target={"_blank"} className={clsx(styles.settingItem__link, "button-link")} rel="noreferrer">@getmyid_bot</a></p>
+              <p className={styles.settingItem__text}>После указания ID, вам будет доступна кнопка &quot;Настройки бота&quot; прямо в телеграм. Получить свой ID можно у <a href="https://t.me/getmyid_bot" target={"_blank"} className={clsx(styles.settingItem__link, "button-link")} rel="noreferrer">@getmyid_bot</a></p>
               <form onSubmit={handleFormSubmit} className={styles.settingItem__form}>
                 <input type="text" className={clsx(styles.settingItem__input, styles.settingItem__input_id, "input")} placeholder="Ваш ID" />
                 <button type={"submit"} className={clsx(styles.settingItem__button, "button button_success")}>Сохранить</button>
@@ -49,7 +49,7 @@ const SettingsPage = () => {
             </div>
             <div className={clsx(styles.settings__item, styles.settingItem, styles.settingItem_padding)}>
               <h5 className={clsx(styles.settingItem__title, "title")}>Сообщение при старте</h5>
-              <p className={clsx(styles.settingItem__text, styles.settingItem__text_margin)}>После того, как пользователь нажмёт кнопку "Старт", ему вышлется следующее сообщение:</p>
+              <p className={clsx(styles.settingItem__text, styles.settingItem__text_margin)}>После того, как пользователь нажмёт кнопку &quot;Старт&quot;, ему вышлется следующее сообщение:</p>
               <form className={styles.settingItem__form}>
                 <textarea type="text" className={styles.settingItem__textarea} placeholder="Пусто" maxLength={4096} />
                 <button type={"submit"} className={clsx(styles.settingItem__button, "button button_success")}>Сохранить</button>
@@ -65,7 +65,7 @@ const SettingsPage = () => {
             </div>
             <div className={clsx(styles.settings__item, styles.settingItem, styles.settingItem_padding)}>
               <h5 className={clsx(styles.settingItem__title, "title")}>Внутренний баланс бота</h5>
-              <p className={clsx(styles.settingItem__text, styles.settingItem__text_margin)}>Если включен, то доступна реферальная программа. Если выключен, то реферальная программа для бота работать не будет, а оплата будет проходить напрямую за каждый товар. Настроить реферальную систему можно во вкладке "Реферальная система" в главном меню.</p>
+              <p className={clsx(styles.settingItem__text, styles.settingItem__text_margin)}>Если включен, то доступна реферальная программа. Если выключен, то реферальная программа для бота работать не будет, а оплата будет проходить напрямую за каждый товар. Настроить реферальную систему можно во вкладке &quot;Реферальная система&quot; в главном меню.</p>
               <form className={clsx(styles.settingItem__form, styles.settingItem__form_checkbox)}>
                 <label className={styles.settingItem__label} htmlFor="r0">Включен</label>
                 <input type="checkbox" className={styles.settingItem__checkbox} id="r0" />
@@ -157,7 +157,7 @@ const SettingsPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default SettingsPage;

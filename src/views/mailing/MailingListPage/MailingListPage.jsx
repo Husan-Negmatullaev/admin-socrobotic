@@ -17,7 +17,7 @@ const MailingListPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default MailingListPage;

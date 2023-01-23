@@ -21,7 +21,7 @@ const TableUsersRow = () => {
     if (targetItemValue.length !== 4) {
       setReferral(targetItemValue);
       return;
-    };
+    }
   };
 
   const submitFormHandler = (event) => {
@@ -95,7 +95,7 @@ const TableUsersRow = () => {
         {/* <button className="button button_blue-outline">Написать</button> */}
       </td>
     </tr>
-  )
-}
+  );
+};
 
 export default TableUsersRow;

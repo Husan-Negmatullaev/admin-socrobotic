@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { Line } from "react-chartjs-2";
+import PropTypes from 'prop-types';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -10,8 +11,9 @@ import {
     Title,
     Tooltip,
     Filler,
-    Legend
+    Legend,
 } from "chart.js";
+
 import styles from "./CommonChart.module.scss";
 
 ChartJS.register(
@@ -36,9 +38,9 @@ const options = {
     },
     plugins: {
         legend: {
-            position: "top"
+            position: "top",
         },
-    }
+    },
 };
 
 const data = {
@@ -56,11 +58,11 @@ const data = {
                 'rgba(255, 206, 86, 0.2)',
                 'rgba(75, 192, 192, 0.2)',
                 'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 159, 64, 0.2)',
             ],
             borderWidth: 1,
-        }
-    ]
+        },
+    ],
 };
 
 const CommonChart = ({classes}) => {
@@ -69,6 +71,10 @@ const CommonChart = ({classes}) => {
             <Line options={options} data={data} />
         </div>
     );
+};
+
+CommonChart.propTypes = {
+    classes: PropTypes.object,
 };
 
 export default CommonChart;

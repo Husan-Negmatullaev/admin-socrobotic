@@ -3,7 +3,7 @@ import React from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-import styles from "./MailingListTable.module.scss"
+import styles from "./MailingListTable.module.scss";
 
 const Popup = withReactContent(Swal);
 
@@ -35,7 +35,7 @@ const MailingListTableRow = () => {
         <button type="button" onClick={openPopup} className="button button_blue-outline">Описание</button>
       </td>
     </tr>
-  )
-}
+  );
+};
 
 export default MailingListTableRow;

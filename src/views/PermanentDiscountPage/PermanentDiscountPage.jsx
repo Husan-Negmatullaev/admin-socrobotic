@@ -21,8 +21,8 @@ const PermanentDiscountPage = () => {
         <input type="number" min={0} className={clsx(styles.discount__input, "input")} placeholder="ID пользователя" />
         <input type="number" min={0} max={100} className={clsx(styles.discount__input, "input")} placeholder="% скидки" />
       </form>
-    )
-  })
+    ),
+  });
 
   return (
     <div className={clsx(styles.discount, "page")}>
@@ -66,7 +66,7 @@ const PermanentDiscountPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default PermanentDiscountPage;

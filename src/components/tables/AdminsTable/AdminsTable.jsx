@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 import AdminsTableRow from "./AdminsTableRow";
 
@@ -22,7 +23,11 @@ const AdminsTable = ({ classes }) => {
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
-export default AdminsTable
+AdminsTable.propTypes = {
+  classes: PropTypes.object,
+};
+
+export default AdminsTable;

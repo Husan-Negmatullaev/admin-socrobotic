@@ -48,7 +48,7 @@ const CouponsTableRow = () => {
       <td className="table__td"><button onClick={openPopup} type="button" className="button button_success-outline">Редактировать</button></td>
       <td className="table__td"><button type="button" className={clsx(styles.coupons__icon, "button _icon-trash-alt")}></button></td>
     </tr>
-  )
-}
+  );
+};
 
 export default CouponsTableRow;

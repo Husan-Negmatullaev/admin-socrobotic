@@ -3,5 +3,5 @@ import MailingListPage from "./MailingListPage/MailingListPage";
 
 export {
   MailingPage,
-  MailingListPage
+  MailingListPage,
 };

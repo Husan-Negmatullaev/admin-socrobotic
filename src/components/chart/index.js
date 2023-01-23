@@ -5,5 +5,5 @@ import ViewsPage from "../../views/stats/ViewsPage/ViewsPage";
 export {
   LineChart,
   CommonChart,
-  ViewsPage
+  ViewsPage,
 };

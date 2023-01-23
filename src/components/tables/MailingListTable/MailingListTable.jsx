@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 import MailingListTableRow from "./MailingListTableRow";
 
@@ -27,7 +28,11 @@ const MailingListTable = ({ classes }) => {
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
+
+MailingListTable.propTypes = {
+  classes: PropTypes.object,
+};
 
 export default MailingListTable;
